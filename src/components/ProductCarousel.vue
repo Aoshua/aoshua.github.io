@@ -1,11 +1,20 @@
 <script setup lang="ts">
 	import { ref, onMounted, onUnmounted } from "vue"
 
-	const images = ["/img/products/green-squario.png", "/img/products/run-io_with_label.png"]
+	interface CarouselImage {
+		src: string
+		alt: string
+	}
+
+	const props = withDefaults(defineProps<{ images?: CarouselImage[] }>(), {
+		images: () => [{ src: "/img/products/run-io.png", alt: "Territorio app screenshot" }],
+	})
+
 	const current = ref(0)
 	let interval: number | undefined
 
 	function startInterval() {
+		if (props.images.length < 2) return
 		interval = window.setInterval(next, 7000)
 	}
 	function resetInterval() {
@@ -17,7 +26,7 @@
 	}
 
 	function next() {
-		current.value = (current.value + 1) % images.length
+		current.value = (current.value + 1) % props.images.length
 	}
 	function goTo(idx: number) {
 		current.value = idx
@@ -36,22 +45,18 @@
 </script>
 
 <template>
-	<div class="w-60 lg:w-96 mx-auto flex flex-col items-center">
-		<div class="w-full h-60 lg:h-96 overflow-hidden rounded-lg mb-2 lg:mb-4">
-			<img :src="images[current]" alt="carousel" class="w-full h-full object-cover transition duration-500" />
+	<div class="flex flex-col items-center">
+		<div class="w-full overflow-hidden rounded-2xl ring-1 ring-black/10 shadow-lg bg-white">
+			<img :src="images[current].src" :alt="images[current].alt" class="w-full h-full object-cover transition duration-500" />
 		</div>
-		<div class="flex gap-4 items-center justify-center w-full">
-			<div class="flex gap-2">
-				<button
-					v-for="(img, idx) in images"
-					:key="idx"
-					@click="goTo(idx)"
-					:class="['w-3 h-3 rounded-full', current === idx ? 'bg-white' : 'bg-gray-400']"
-					aria-label="Go to slide"
-				></button>
-			</div>
+		<div v-if="images.length > 1" class="flex gap-2 items-center justify-center mt-4">
+			<button
+				v-for="(img, idx) in images"
+				:key="idx"
+				@click="goTo(idx)"
+				:class="['w-2.5 h-2.5 rounded-full transition-colors', current === idx ? 'bg-brand-600' : 'bg-neutral-300 hover:bg-neutral-400']"
+				:aria-label="'Go to slide ' + (idx + 1)"
+			></button>
 		</div>
 	</div>
 </template>
-
-<style scoped lang="less"></style>
