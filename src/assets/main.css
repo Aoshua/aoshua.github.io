@@ -1,7 +1,13 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @theme {
 	--color-brand-300: #8fde5d;
 	--color-brand-600: #3ca370;
 	--font-display: "Sansation", sans-serif;
+}
+
+/* Wraps rendered markdown tables so wide ones scroll on their own. */
+.doc-table-wrap {
+	overflow-x: auto;
 }

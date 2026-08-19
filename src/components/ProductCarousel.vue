@@ -7,7 +7,7 @@
 	}
 
 	const props = withDefaults(defineProps<{ images?: CarouselImage[] }>(), {
-		images: () => [{ src: "/img/products/run-io.png", alt: "Territorio app screenshot" }],
+		images: () => [{ src: "/img/products/run-io.png", alt: "Territor.io app screenshot" }],
 	})
 
 	const current = ref(0)
