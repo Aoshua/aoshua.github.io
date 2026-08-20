@@ -18,22 +18,22 @@
 
 		<div class="relative mx-auto max-w-4xl px-4 sm:px-6">
 			<!-- Hero -->
-			<header class="flex flex-col items-center pt-16 pb-14 text-center sm:pt-24 sm:pb-20">
+			<header class="flex flex-col items-center pt-10 pb-8 text-center sm:pt-24 sm:pb-20">
 				<img src="/img/logo.png" alt="Forsyte Studios eye logo" class="h-24 w-24 sm:h-28 sm:w-28" />
 				<h1 class="font-display mt-4 text-4xl tracking-wide sm:text-5xl">Forsyte Studios</h1>
 				<p class="mt-3 max-w-md text-lg text-neutral-600">Games for the real world.</p>
-				<div class="mt-6 h-1 w-16 rounded-full bg-brand-600" aria-hidden="true"></div>
+				<div class="mt-5 h-1 w-16 rounded-full bg-brand-600 sm:mt-6" aria-hidden="true"></div>
 			</header>
 
-			<main class="space-y-16 pb-16 sm:space-y-20">
+			<main class="space-y-12 pb-12 sm:space-y-20 sm:pb-16">
 				<!-- Our Apps -->
 				<section aria-labelledby="apps-heading">
 					<p class="font-display text-sm font-bold uppercase tracking-widest text-brand-600">What we make</p>
 					<h2 id="apps-heading" class="mt-1 text-2xl font-semibold sm:text-3xl">Our Apps</h2>
 
-					<div class="mt-6 space-y-8">
+					<div class="mt-5 space-y-6 sm:mt-6 sm:space-y-8">
 						<!-- Territor.io — future app cards slot in below this one -->
-						<article class="grid grid-cols-1 items-center gap-8 rounded-2xl bg-white p-6 shadow-sm ring-1 ring-black/5 sm:p-8 md:grid-cols-2">
+						<article class="grid grid-cols-1 items-center gap-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 sm:gap-8 sm:p-8 md:grid-cols-2">
 							<div class="mx-auto w-full max-w-[16rem] md:max-w-xs">
 								<ProductCarousel :images="territorIoImages" />
 							</div>
@@ -45,7 +45,7 @@
 									from other runners.
 								</p>
 								<!-- TODO: replace # with real App Store / Google Play URLs -->
-								<div class="mt-6 flex flex-wrap justify-center gap-3 md:justify-start">
+								<div class="mt-5 flex flex-wrap justify-center gap-3 sm:mt-6 md:justify-start">
 									<a href="#" class="inline-flex items-center gap-2.5 rounded-xl bg-neutral-900 px-4 py-2.5 text-white transition hover:bg-neutral-700">
 										<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											<path
@@ -77,7 +77,7 @@
 				<section aria-labelledby="mission-heading">
 					<p class="font-display text-sm font-bold uppercase tracking-widest text-brand-600">Why we build</p>
 					<h2 id="mission-heading" class="mt-1 text-2xl font-semibold sm:text-3xl">Our Mission</h2>
-					<p class="mt-4 max-w-3xl text-lg leading-relaxed text-neutral-600">
+					<p class="mt-3 max-w-3xl text-lg leading-relaxed text-neutral-600 sm:mt-4">
 						We create imaginative, accessible experiences that bring people together through play. Our focus is on polished, innovative games and apps that get people
 						moving, exploring, and connecting in the real world — and we're just getting started.
 					</p>
@@ -87,15 +87,15 @@
 				<section aria-labelledby="legal-heading">
 					<p class="font-display text-sm font-bold uppercase tracking-widest text-brand-600">Your data</p>
 					<h2 id="legal-heading" class="mt-1 text-2xl font-semibold sm:text-3xl">Legal</h2>
-					<p class="mt-4 max-w-3xl text-lg leading-relaxed text-neutral-600">
+					<p class="mt-3 max-w-3xl text-lg leading-relaxed text-neutral-600 sm:mt-4">
 						The policies covering Territor.io — how your data is handled, the terms you agree to, and how to delete your account whenever you like.
 					</p>
-					<div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+					<div class="mt-5 grid grid-cols-1 gap-4 sm:mt-6 sm:grid-cols-3">
 						<RouterLink
 							v-for="link in legalLinks"
 							:key="link.to"
 							:to="link.to"
-							class="group rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 transition hover:ring-brand-600/40"
+							class="group rounded-2xl bg-white p-4 shadow-sm ring-1 ring-black/5 transition hover:ring-brand-600/40 sm:p-5"
 						>
 							<h3 class="font-display text-lg transition group-hover:text-brand-600">{{ link.title }}</h3>
 							<p class="mt-2 text-sm leading-relaxed text-neutral-600">{{ link.blurb }}</p>
@@ -107,10 +107,10 @@
 				<section aria-labelledby="contact-heading">
 					<p class="font-display text-sm font-bold uppercase tracking-widest text-brand-600">Get in touch</p>
 					<h2 id="contact-heading" class="mt-1 text-2xl font-semibold sm:text-3xl">Contact Us</h2>
-					<p class="mt-4 text-lg text-neutral-600">Questions, feedback, or support requests — we'd love to hear from you.</p>
+					<p class="mt-3 text-lg text-neutral-600 sm:mt-4">Questions, feedback, or support requests — we'd love to hear from you.</p>
 					<a
 						href="mailto:forsyte.studios@gmail.com"
-						class="mt-5 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 font-medium text-white transition hover:bg-brand-600/90"
+						class="mt-4 inline-flex items-center gap-2 rounded-xl bg-brand-600 px-5 py-3 font-medium text-white transition hover:bg-brand-600/90 sm:mt-5"
 					>
 						<svg
 							class="h-5 w-5"
@@ -130,11 +130,11 @@
 				</section>
 			</main>
 
-			<footer class="border-t border-neutral-200 py-8 text-center text-sm text-neutral-400">
+			<footer class="border-t border-neutral-200 py-6 text-center text-sm text-neutral-400 sm:py-8">
 				<nav class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2" aria-label="Legal">
 					<RouterLink v-for="link in legalLinks" :key="link.to" :to="link.to" class="transition hover:text-brand-600">{{ link.title }}</RouterLink>
 				</nav>
-				<p class="mt-4">© 2026 Forsyte Studios</p>
+				<p class="mt-3 sm:mt-4">© 2026 Forsyte Studios</p>
 			</footer>
 		</div>
 	</div>

@@ -11,3 +11,42 @@
 .doc-table-wrap {
 	overflow-x: auto;
 }
+
+/* Doc pages are heading-dense; prose's desktop rhythm is far too airy on a phone.
+   Body text stays 16px — only the vertical rhythm and heading sizes come down. */
+@media (width < 40rem) {
+	.doc-prose :where(h1) {
+		font-size: 1.75rem;
+		margin-bottom: 0.5em;
+	}
+	.doc-prose :where(h2) {
+		font-size: 1.3rem;
+		margin-top: 1.1em;
+		margin-bottom: 0.5em;
+	}
+	.doc-prose :where(h3) {
+		font-size: 1.1rem;
+		margin-top: 1em;
+		margin-bottom: 0.35em;
+	}
+	.doc-prose :where(p, ul, ol) {
+		margin-top: 0.85em;
+		margin-bottom: 0.85em;
+	}
+	.doc-prose :where(li) {
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+	}
+	.doc-prose :where(blockquote) {
+		margin-top: 1.1em;
+		margin-bottom: 1.1em;
+	}
+	.doc-prose :where(hr) {
+		margin-top: 1.75em;
+		margin-bottom: 1.75em;
+	}
+	.doc-prose :where(table, .doc-table-wrap) {
+		margin-top: 1.1em;
+		margin-bottom: 1.1em;
+	}
+}
