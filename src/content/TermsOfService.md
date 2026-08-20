@@ -82,15 +82,21 @@ the shape of a published loop can reveal where you run — publish thoughtfully.
 
 ## 7. Purchases and subscriptions
 
-Territor.io's core game is free to play. We may offer optional paid features, including **Territor.io Pro**
-subscriptions and ad-supported or ad-free publishing.
+**Territor.io is currently free to play. The app contains no purchases, no subscriptions, and no
+advertising.** There is nothing to buy, and we ask you for no payment information.
 
-- Purchases and subscriptions are processed by the **Apple App Store** or **Google Play**, subject to
-  their terms. Prices, billing, renewals, and refunds are governed by those platforms.
+We may add optional paid features in the future — we have in mind a **Territor.io Pro** subscription and
+ad-supported or ad-free publishing. **If and when we do**, the following will apply, and we will update
+these Terms and our [Privacy Policy](PrivacyPolicy.md) before those features go live:
+
+- Purchases and subscriptions will be processed by the **Apple App Store** or **Google Play**, subject
+  to their terms. Prices, billing, renewals, and refunds are governed by those platforms.
 - Subscriptions renew automatically unless canceled through your app store account settings.
 - Except where required by law or platform policy, payments are non-refundable.
-- Paid features provide convenience and cosmetics only. Territor.io is designed **not to be pay-to-win** —
-  scoring rules are the same for all players.
+- Paid features will provide convenience and cosmetics only. Territor.io is designed **not to be
+  pay-to-win** — scoring rules are the same for all players.
+
+Nothing in this section obliges us to release any paid feature.
 
 ## 8. Third-party services
 
@@ -176,6 +182,13 @@ Questions about these Terms:
 
 **Joshua Abbott, doing business as Forsyte Studios**
 **forsyte.studios@gmail.com**
+
+These documents are published at **www.forsyte-studios.com**, and are reachable from
+**Settings → Legal** inside the app:
+
+- [Terms of Service](TermsOfService.md)
+- [Privacy Policy](PrivacyPolicy.md)
+- [Account and Data Deletion](AccountAndDataDeletion.md)
 
 ---
 

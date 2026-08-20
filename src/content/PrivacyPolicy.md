@@ -51,8 +51,8 @@ your route and calculate the area your loop encloses.
 - On **iOS**, if you grant "Always" permission, recording can continue **in the background** so your run
   keeps tracking with the screen off. iOS shows the blue background-location indicator while this
   happens.
-- On **Android**, a foreground service with a persistent notification keeps your run recording while
-  the screen is off. We do **not** request Android's separate background-location permission
+- On **Android**, a foreground service keeps your run recording while the screen is off. It runs only
+  for the duration of a run. We do **not** request Android's separate background-location permission
   (`ACCESS_BACKGROUND_LOCATION`), so location is never collected when you aren't recording a run.
 
 > **What we store is minimized.** We do **not** keep the raw, point-by-point GPS trail of your run on
@@ -64,15 +64,33 @@ your route and calculate the area your loop encloses.
 For each run you record and submit, we store:
 
 - the **enclosed loop boundary** (a simplified polygon) and its **area**,
+- the **distance** you covered,
 - **start and end times**,
 - the **score** and any group(s) you publish it to,
-- environmental **conditions captured for scoring** (for example temperature, precipitation, darkness,
-  and elevation gain), which the server looks up for the time and place of your run.
+- environmental **conditions captured for scoring** — temperature, precipitation, snowfall, darkness,
+  and elevation gain — which the server looks up for the time and place of your run and uses for the
+  **live conditions multiplier**. This snapshot is taken once when your run ends and stored with the
+  run; it is never re-fetched;
+- **achievements the run unlocked** — your all-time distance firsts (first 5K, 10K, half marathon,
+  marathon) and the length of your consecutive-week running streak;
+- **trophies you have earned** — season podium finishes (with the score and area you won on) plus
+  permanent milestone, streak, and landmark awards.
+
+> **Landmarks deserve their own mention.** When the Landmark rule is active, we record which
+> **specific real-world places** — parks, monuments, museums, capitols — your loop enclosed, and which
+> of them you claimed in a given season. That is a durable record of particular places you have run
+> around, so we call it out separately rather than folding it into "score". It is derived from the
+> loop boundary you submit; we don't track you to those places.
 
 ### On-device information
 If you finish a run while offline, the full run — including its track points — is stored **locally on
 your device** until it can be submitted, then cleared. This data stays on your device and is not
 readable by us until you submit the run.
+
+Territor.io also keeps a **diagnostic log** on your device — a rolling record of app events such as
+permission results and sync attempts, used for troubleshooting. It stays on your device and is never
+sent to us automatically. You can view it in **Settings → Logs**, and it leaves your device only if
+you choose to share it with us.
 
 ### Information we do **not** collect today
 Territor.io does **not** include the Firebase Analytics SDK, any crash-reporting SDK, or any advertising
@@ -83,8 +101,8 @@ access to your contacts, photos, camera, microphone, or health/fitness sensors.
 Territor.io is under active development. Features described in our app materials but **not yet live** may, when
 released, involve additional data — for example:
 
-- a **live conditions multiplier** using richer weather, elevation, and time-of-run data;
-- **public groups and discovery** that suggest groups based on where you run;
+- **public-group discovery** that suggests groups based on where you run (public groups themselves
+  already exist — see [What other players can see](#what-other-players-can-see));
 - **home-zone obfuscation** settings that let you hide or clip routes near a private area;
 - **Territor.io Pro** subscriptions and **ad-supported** publishing, which involve a payment processor
   (Apple/Google) and, for ads, an advertising provider;
@@ -99,7 +117,8 @@ We use the information above to:
 - authenticate you and maintain your account and profile;
 - record your runs, detect enclosed loops, and calculate area and score;
 - place you and your territory on leaderboards and the map;
-- look up weather and elevation for the conditions that affect your score;
+- look up weather, daylight, and elevation to compute the **live conditions multiplier** applied to
+  your score;
 - sync runs recorded offline;
 - keep the game fair (detecting implausible speeds, GPS quality problems, and suspicious loops);
 - respond to your support requests and comply with legal obligations.
@@ -114,6 +133,9 @@ Territor.io is a competitive, social game, so some information is shown to other
   **score**.
 - On the territory map: your **username**, **color**, and the **boundary shape of loops you have
   published**.
+
+Who that audience is depends on where you publish. A **private group** shows your runs only to its
+members. The **Global** game, and any group marked **public**, are visible to every Territor.io player.
 
 > **Loop shapes can reveal where you run.** The outline of a published loop shows, on a map, the ground
 > you covered — which may indicate where you live, work, or spend time. **Nothing is shared until you
@@ -135,7 +157,7 @@ provide its service:
 | **Google Firebase Authentication** (Google LLC) | Sign-in and identity | Your Google/Apple account identity and tokens |
 | **Google Sign-In / Apple Sign-In** | Authentication providers | Your account credentials (handled by them, not us) |
 | **MapTiler / CARTO / OpenStreetMap** | Base map tiles | The map area (coordinates) your device is viewing |
-| **Open-Meteo** | Weather & elevation for scoring | Run coordinates and times (sent by our server) |
+| **Open-Meteo** | Weather & elevation for scoring | A downsampled sample of your route's coordinates, plus the run's times (sent by our server) |
 | **Overpass API / OpenStreetMap** | Landmark data for the Landmark rules | Map-area coordinates (sent by our server, not by your device) |
 | **Fly.io** and **Neon** (database) | Hosting and data storage | The account and run data described above |
 
@@ -157,10 +179,12 @@ We keep your account and run data for as long as your account is active. You can
 associated data at any time — see [Account and Data Deletion](AccountAndDataDeletion.md).
 
 ### Deleting your data
-When you delete your account, we remove your published loops, publications, and group memberships, and
-we anonymize your account record (clearing your email, username, display name, and photo). Your sign-in
-identity is deleted from Firebase Authentication as part of the process. Some information may be retained
-where required for legal, security, or fraud-prevention reasons.
+When you delete your account, we remove your loops and their publications, your group memberships, your
+trophies, and your landmark claims — along with the per-run snapshots (conditions, achievements, and
+enclosed landmarks) attached to those runs. We then anonymize your account record, clearing your email,
+username, display name, and photo. Your sign-in identity is deleted from Firebase Authentication as part
+of the process. Some information may be retained where required for legal, security, or fraud-prevention
+reasons.
 
 ## Children's privacy
 

@@ -13,8 +13,9 @@ The quickest way to delete everything is in the app:
 
 1. Open Territor.io and go to **Settings**.
 2. Choose **Delete account**.
-3. Confirm in the dialog (you'll be asked to type to confirm, and you may be asked to sign in again to
-   verify it's you).
+3. Confirm in the dialog — you'll be asked to type to confirm, and then to sign in again so we can
+   verify it's you. Nothing is deleted until that sign-in succeeds, so cancelling at this step leaves
+   your account untouched.
 
 Your account and data are deleted right away, and you are signed out.
 
@@ -30,13 +31,22 @@ When your account is deleted, we:
 
 - **remove** the loops (territory) you've created and their publications, so they disappear from all
   leaderboards and maps;
+- **remove** the per-run records attached to those loops — the conditions snapshot used for scoring,
+  your achievement snapshots, and the landmarks each run enclosed;
+- **remove** your trophies, including season podium finishes, and your landmark claims (which releases
+  those places for other runners);
 - **remove** your memberships in all groups;
 - **anonymize** your account record — we clear your email address, username, display name, and profile
   photo, and detach your sign-in identity;
 - **delete** your sign-in identity from Firebase Authentication (the Google/Apple link Territor.io used to log
   you in).
 
-Any run data cached only on your device is removed when you uninstall the app or clear its data.
+Shared reference data is not yours and stays: the OpenStreetMap landmark records themselves, and the
+groups and seasons other players are still using.
+
+Runs still queued on your device — recorded offline and not yet submitted — are **cleared as part of
+the deletion**, before you're signed out. The on-device diagnostic log is not cleared; it is removed
+when you uninstall the app or clear its data.
 
 ## What we may keep
 
