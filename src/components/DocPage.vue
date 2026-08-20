@@ -25,7 +25,7 @@
 </script>
 
 <template>
-	<div class="relative min-h-screen overflow-x-hidden bg-neutral-50 text-neutral-900">
+	<div class="relative min-h-screen overflow-x-clip bg-neutral-50 text-neutral-900">
 		<!-- Soft decorative brand-green blobs -->
 		<div class="pointer-events-none absolute -top-40 -right-40 h-[32rem] w-[32rem] rounded-full bg-brand-300/20 blur-3xl" aria-hidden="true"></div>
 		<div class="pointer-events-none absolute -bottom-48 -left-48 h-[36rem] w-[36rem] rounded-full bg-brand-600/10 blur-3xl" aria-hidden="true"></div>
