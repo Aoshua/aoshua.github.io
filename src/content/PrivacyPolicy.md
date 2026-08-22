@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: August 18, 2026**
+**Last updated: August 22, 2026**
 
 This Privacy Policy explains what information the Territor.io mobile app ("Territor.io", "the app", "we", "us")
 collects, why we collect it, who we share it with, and the choices and rights you have. Territor.io is
@@ -87,10 +87,16 @@ If you finish a run while offline, the full run — including its track points �
 your device** until it can be submitted, then cleared. This data stays on your device and is not
 readable by us until you submit the run.
 
-Territor.io also keeps a **diagnostic log** on your device — a rolling record of app events such as
-permission results and sync attempts, used for troubleshooting. It stays on your device and is never
-sent to us automatically. You can view it in **Settings → Logs**, and it leaves your device only if
-you choose to share it with us.
+Territor.io also keeps a **diagnostic log** on your device, used for troubleshooting. It records app
+events, permission results, the network requests the app makes to our server, errors and crash
+details, and — while a run is recording — the **approximate** location of each GPS reading, rounded
+to about 110 metres so the log cannot be used to retrace your route. The log resets each day, is
+capped in size, and is **never sent to us automatically**.
+
+You can read it at any time in **Settings → Logs**, clear it there, and it leaves your device only
+when you choose to email it to us as a bug report. When you do, your email app opens with the log
+attached and shows you what is being sent — you can remove the attachment or cancel before sending.
+The log is also removed when you uninstall the app or clear its data.
 
 ### Information we do **not** collect today
 Territor.io does **not** include the Firebase Analytics SDK, any crash-reporting SDK, or any advertising
@@ -160,6 +166,10 @@ provide its service:
 | **Open-Meteo** | Weather & elevation for scoring | A downsampled sample of your route's coordinates, plus the run's times (sent by our server) |
 | **Overpass API / OpenStreetMap** | Landmark data for the Landmark rules | Map-area coordinates (sent by our server, not by your device) |
 | **Fly.io** and **Neon** (database) | Hosting and data storage | The account and run data described above |
+
+If you choose to email us a bug report or a support request, it travels through **your own email
+provider** and is received at a **Google-hosted (Gmail) address**, so Google handles the message and
+anything attached to it. We use what you send only to answer that request.
 
 When monetization ships, this list will also include the **Apple App Store / Google Play** payment
 systems (for Territor.io Pro) and an **advertising provider** (for ad-supported publishing).
