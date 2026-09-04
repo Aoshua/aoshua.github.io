@@ -7,7 +7,7 @@
 	}
 
 	const props = withDefaults(defineProps<{ images?: CarouselImage[] }>(), {
-		images: () => [{ src: "/img/products/run-io.png", alt: "Territor.io app screenshot" }],
+		images: () => [{ src: "/img/products/territorio/01-turf.webp", alt: "Territor.io app screenshot" }],
 	})
 
 	const current = ref(0)
@@ -46,8 +46,8 @@
 
 <template>
 	<div class="flex flex-col items-center">
-		<div class="w-full overflow-hidden rounded-2xl ring-1 ring-black/10 shadow-lg bg-white">
-			<img :src="images[current].src" :alt="images[current].alt" class="w-full h-full object-cover transition duration-500" />
+		<div class="w-full overflow-hidden rounded-2xl ring-1 ring-black/10 shadow-lg">
+			<img :src="images[current].src" :alt="images[current].alt" class="block w-full h-auto transition duration-500" />
 		</div>
 		<div v-if="images.length > 1" class="flex gap-2 items-center justify-center mt-4">
 			<button

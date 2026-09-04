@@ -1,7 +1,12 @@
 <script setup lang="ts">
 	import ProductCarousel from "@/components/ProductCarousel.vue"
 
-	const territorIoImages = [{ src: "/img/products/run-io.png", alt: "Territor.io app showing a live run on a map" }]
+	const territorIoImages = [
+		{ src: "/img/products/territorio/01-turf.webp", alt: "Territor.io live run map with claimed neighborhood territory" },
+		{ src: "/img/products/territorio/02-rivals.webp", alt: "A group standings leaderboard ranking runners by points" },
+		{ src: "/img/products/territorio/03-score.webp", alt: "A run summary showing the acres of territory scored" },
+		{ src: "/img/products/territorio/04-trophies.webp", alt: "Trophies, milestones, and streaks earned in Territor.io" },
+	]
 
 	const legalLinks = [
 		{ to: "/privacy", title: "Privacy Policy", blurb: "What Territor.io collects, why, and who it's shared with." },
@@ -34,9 +39,6 @@
 					<div class="mt-5 space-y-6 sm:mt-6 sm:space-y-8">
 						<!-- Territor.io — future app cards slot in below this one -->
 						<article class="grid grid-cols-1 items-center gap-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-black/5 sm:gap-8 sm:p-8 md:grid-cols-2">
-							<div class="mx-auto w-full max-w-[16rem] md:max-w-xs">
-								<ProductCarousel :images="territorIoImages" />
-							</div>
 							<div class="text-center md:text-left">
 								<h3 class="font-display text-3xl sm:text-4xl">Territor.io</h3>
 								<p class="mt-2 text-lg font-medium text-brand-600">Run. Claim your streets. Compete with friends.</p>
@@ -44,9 +46,13 @@
 									Territor.io turns every run into a game of conquest — trace routes through your neighborhood to capture territory on a live map and defend it
 									from other runners.
 								</p>
-								<!-- TODO: replace # with real App Store / Google Play URLs -->
 								<div class="mt-5 flex flex-wrap justify-center gap-3 sm:mt-6 md:justify-start">
-									<a href="#" class="inline-flex items-center gap-2.5 rounded-xl bg-neutral-900 px-4 py-2.5 text-white transition hover:bg-neutral-700">
+									<a
+										href="https://apps.apple.com/us/app/territor-io/id6785139321"
+										target="_blank"
+										rel="noopener"
+										class="inline-flex items-center gap-2.5 rounded-xl bg-neutral-900 px-4 py-2.5 text-white transition hover:bg-neutral-700"
+									>
 										<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											<path
 												d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"
@@ -57,17 +63,25 @@
 											><span class="block text-sm font-semibold">App Store</span></span
 										>
 									</a>
-									<a href="#" class="inline-flex items-center gap-2.5 rounded-xl bg-neutral-900 px-4 py-2.5 text-white transition hover:bg-neutral-700">
+									<span
+										role="link"
+										aria-disabled="true"
+										title="Coming soon to Google Play"
+										class="inline-flex cursor-not-allowed select-none items-center gap-2.5 rounded-xl bg-neutral-200 px-4 py-2.5 text-neutral-500"
+									>
 										<svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
 											<path
 												d="M3.61 1.81a1.5 1.5 0 0 0-.61 1.2v17.98c0 .5.24.94.61 1.2l9.79-10.19L3.61 1.81zm11.2 8.72L5.6 1.02l11.53 6.63-2.32 2.88zm3.85-1.6 2.62 1.5c.96.56.96 1.58 0 2.14l-2.62 1.5-2.6-2.57 2.6-2.57zm-3.85 5.54 2.32 2.88L5.6 22.98l9.21-8.51z"
 											/>
 										</svg>
 										<span class="text-left leading-tight"
-											><span class="block text-[0.65rem] text-neutral-300">Get it on</span><span class="block text-sm font-semibold">Google Play</span></span
+											><span class="block text-[0.65rem] text-neutral-400">Coming soon</span><span class="block text-sm font-semibold">Google Play</span></span
 										>
-									</a>
+									</span>
 								</div>
+							</div>
+							<div class="mx-auto w-full max-w-[14rem] sm:max-w-[15rem]">
+								<ProductCarousel :images="territorIoImages" />
 							</div>
 						</article>
 					</div>
