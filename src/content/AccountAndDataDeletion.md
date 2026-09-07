@@ -1,6 +1,6 @@
 # Account and Data Deletion
 
-**Last updated: August 18, 2026**
+**Last updated: September 5, 2026**
 
 This page explains how to delete your Territor.io account and the data associated with it. Google Play requires
 that this information be available at a public URL — you can link to it from the Play Console and from the
@@ -19,6 +19,17 @@ The quickest way to delete everything is in the app:
 
 Your account and data are deleted right away, and you are signed out.
 
+## Delete individual runs
+
+You can also delete individual runs without deleting your account:
+
+1. Open **Profile** and go to **Run history**.
+2. Tap the run you want to remove.
+3. If the run has been published to a leaderboard, tap **Remove from all targets** first to withdraw it from every board, then reload the run detail.
+4. Tap **Delete run** and confirm. The run is removed from your history immediately.
+
+Rejected runs (ones that didn't form a valid loop) can be deleted directly without an unpublish step.
+
 ## Request deletion by email
 
 If you can't access the app (for example, you've lost your device), email **forsyte.studios@gmail.com**
@@ -30,7 +41,8 @@ verify your identity. We'll process verified requests within **30** days.
 When your account is deleted, we:
 
 - **remove** the loops (territory) you've created and their publications, so they disappear from all
-  leaderboards and maps;
+  leaderboards and maps — this includes runs imported from Apple Health, which are stored as ordinary
+  loops and deleted the same way;
 - **remove** the per-run records attached to those loops — the conditions snapshot used for scoring,
   your achievement snapshots, and the landmarks each run enclosed;
 - **remove** your trophies, including season podium finishes, and your landmark claims (which releases
