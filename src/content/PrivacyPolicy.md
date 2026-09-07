@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: August 22, 2026**
+**Last updated: September 4, 2026**
 
 This Privacy Policy explains what information the Territor.io mobile app ("Territor.io", "the app", "we", "us")
 collects, why we collect it, who we share it with, and the choices and rights you have. Territor.io is
@@ -21,6 +21,8 @@ which have their own privacy policies — see [Third parties we share data with]
 - We use your **location** while you record a run so we can measure the loop you run and turn it into
   territory on the map.
 - We use your **Google or Apple account** to sign you in. We never see or store your password.
+- On iOS, you can **optionally** turn on **Apple Fitness sync** to import runs you recorded on
+  your Apple Watch. When you do, we read those workouts and their GPS routes from Apple Health.
 - Other players can see your **username, profile color, captured area, and the shape of the loops you
   publish** — not your real name, email, or photo.
 - We **do not sell your data**, and we don't run analytics or advertising trackers in the app today.
@@ -82,6 +84,22 @@ For each run you record and submit, we store:
 > around, so we call it out separately rather than folding it into "score". It is derived from the
 > loop boundary you submit; we don't track you to those places.
 
+### Runs imported from Apple Health (iOS only, optional)
+On iOS, you can turn on **Apple Fitness sync** in Settings. When you do, and after you grant the
+Apple Health permission prompt, Territor.io reads your **running workouts and their GPS routes** from
+Apple Health so runs you recorded on your Apple Watch (or another app that saves workouts to Apple
+Health) appear in your run history and can be published like any run you record in the app.
+
+- We read Apple Health **only** while Apple Fitness sync is turned on, and we read **only running
+  workouts** — no other health or fitness categories.
+- We read your data **from Apple Health on your device**; Apple Health is Apple's on-device store,
+  and turning the sync off stops any further reads. We never write anything to Apple Health.
+- An imported run is treated exactly like a run you record in the app: the route's GPS points are
+  sent to our server, which extracts and stores **only** the enclosed loop's boundary shape, area,
+  distance, start/end times, and score (see the note above — we do not keep the raw GPS trail).
+- Sync is **off by default**. You can turn it off at any time in Settings, or revoke the Apple
+  Health permission in your device settings.
+
 ### On-device information
 If you finish a run while offline, the full run — including its track points — is stored **locally on
 your device** until it can be submitted, then cleared. This data stays on your device and is not
@@ -101,7 +119,9 @@ The log is also removed when you uninstall the app or clear its data.
 ### Information we do **not** collect today
 Territor.io does **not** include the Firebase Analytics SDK, any crash-reporting SDK, or any advertising
 SDK — the app ships with no analytics, telemetry, or advertising trackers of any kind. We do not request
-access to your contacts, photos, camera, microphone, or health/fitness sensors.
+access to your contacts, photos, camera, or microphone. The only health/fitness data we ever read is
+your **running workouts and their routes from Apple Health**, and only if you turn on Apple Fitness
+sync (see [Runs imported from Apple Health](#runs-imported-from-apple-health-ios-only-optional)).
 
 ### Planned features (not yet active)
 Territor.io is under active development. Features described in our app materials but **not yet live** may, when
@@ -112,7 +132,8 @@ released, involve additional data — for example:
 - **home-zone obfuscation** settings that let you hide or clip routes near a private area;
 - **Territor.io Pro** subscriptions and **ad-supported** publishing, which involve a payment processor
   (Apple/Google) and, for ads, an advertising provider;
-- optional **import from Strava, Apple Health, or Google Fit**.
+- optional **import from Strava or Google Fit** (Apple Health import is already live on iOS — see
+  [Runs imported from Apple Health](#runs-imported-from-apple-health-ios-only-optional)).
 
 We will update this policy before any such feature that changes what we collect goes live.
 
@@ -126,6 +147,8 @@ We use the information above to:
 - look up weather, daylight, and elevation to compute the **live conditions multiplier** applied to
   your score;
 - sync runs recorded offline;
+- if you turn on Apple Fitness sync, import runs you recorded on your Apple Watch or another
+  Health-connected app so they appear in your history;
 - keep the game fair (detecting implausible speeds, GPS quality problems, and suspicious loops);
 - respond to your support requests and comply with legal obligations.
 
