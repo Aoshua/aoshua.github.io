@@ -48,6 +48,7 @@ When your account is deleted, we:
 - **remove** your trophies, including season podium finishes, and your landmark claims (which releases
   those places for other runners);
 - **remove** your memberships in all groups;
+- **remove** your registered device tokens and any notifications you have sent or received;
 - **anonymize** your account record — we clear your email address, username, display name, and profile
   photo, and detach your sign-in identity;
 - **delete** your sign-in identity from Firebase Authentication (the Google/Apple link Territor.io used to log

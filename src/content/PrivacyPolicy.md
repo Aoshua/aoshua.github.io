@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: September 4, 2026**
+**Last updated: September 10, 2026**
 
 This Privacy Policy explains what information the Territor.io mobile app ("Territor.io", "the app", "we", "us")
 collects, why we collect it, who we share it with, and the choices and rights you have. Territor.io is
@@ -100,6 +100,17 @@ Health) appear in your run history and can be published like any run you record 
 - Sync is **off by default**. You can turn it off at any time in Settings, or revoke the Apple
   Health permission in your device settings.
 
+### Push notifications
+If you turn notifications on, Territor.io registers a **device push token** with **Firebase Cloud
+Messaging** (part of Google Firebase) so we can send you alerts about your territory, such as when
+another player carves into your land or passes your score. We store that token, the device platform
+(iOS or Android), and when it was last seen, linked to your account. We use it only to deliver these
+notifications.
+
+Notifications are optional. You choose whether to grant the permission, you can turn each type on or off
+in Territor.io's settings, and you can revoke the permission in your device settings at any time. When you
+sign out or delete your account, we remove your device tokens.
+
 ### On-device information
 If you finish a run while offline, the full run — including its track points — is stored **locally on
 your device** until it can be submitted, then cleared. This data stays on your device and is not
@@ -149,6 +160,8 @@ We use the information above to:
 - sync runs recorded offline;
 - if you turn on Apple Fitness sync, import runs you recorded on your Apple Watch or another
   Health-connected app so they appear in your history;
+- send you the push notifications you have turned on (for example, when your territory is taken or your
+  score is passed);
 - keep the game fair (detecting implausible speeds, GPS quality problems, and suspicious loops);
 - respond to your support requests and comply with legal obligations.
 
@@ -184,6 +197,7 @@ provide its service:
 | Provider | Purpose | What it receives |
 |---|---|---|
 | **Google Firebase Authentication** (Google LLC) | Sign-in and identity | Your Google/Apple account identity and tokens |
+| **Google Firebase Cloud Messaging** (Google LLC) | Push notification delivery | Your device push token and the notification's title and text |
 | **Google Sign-In / Apple Sign-In** | Authentication providers | Your account credentials (handled by them, not us) |
 | **MapTiler / CARTO / OpenStreetMap** | Base map tiles | The map area (coordinates) your device is viewing |
 | **Open-Meteo** | Weather & elevation for scoring | A downsampled sample of your route's coordinates, plus the run's times (sent by our server) |
@@ -214,7 +228,8 @@ associated data at any time — see [Account and Data Deletion](AccountAndDataDe
 ### Deleting your data
 When you delete your account, we remove your loops and their publications, your group memberships, your
 trophies, and your landmark claims — along with the per-run snapshots (conditions, achievements, and
-enclosed landmarks) attached to those runs. We then anonymize your account record, clearing your email,
+enclosed landmarks) attached to those runs. We also remove your registered device tokens and any
+notifications you have sent or received. We then anonymize your account record, clearing your email,
 username, display name, and photo. Your sign-in identity is deleted from Firebase Authentication as part
 of the process. Some information may be retained where required for legal, security, or fraud-prevention
 reasons.
@@ -233,6 +248,8 @@ information, to object to or restrict certain processing, and to withdraw consen
 
 - **Location:** You control location access in your device settings and can revoke it at any time
   (Territor.io can't record runs without it).
+- **Notifications:** You choose whether to allow notifications, can turn each type on or off in
+  Territor.io's settings, and can revoke the permission in your device settings at any time.
 - **Access and deletion:** You can delete your account in-app or by contacting us. To request a copy of
   your data, email **forsyte.studios@gmail.com**.
 - **EU/UK (GDPR)** and **California (CCPA/CPRA)** residents have additional rights, including the right
