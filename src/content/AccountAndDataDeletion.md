@@ -1,6 +1,6 @@
 # Account and Data Deletion
 
-**Last updated: September 5, 2026**
+**Last updated: October 17, 2026**
 
 This page explains how to delete your Territor.io account and the data associated with it. Google Play requires
 that this information be available at a public URL — you can link to it from the Play Console and from the
@@ -47,7 +47,9 @@ When your account is deleted, we:
   your achievement snapshots, and the landmarks each run enclosed;
 - **remove** your trophies, including season podium finishes, and your landmark claims (which releases
   those places for other runners);
-- **remove** your memberships in all groups;
+- **remove** your memberships in all groups, your rows on past seasons' final standings, and the record
+  of which season recaps you've seen, and clear you as the Captain of any season;
+- **remove** your registered device tokens and any notifications you have sent or received;
 - **anonymize** your account record — we clear your email address, username, display name, and profile
   photo, and detach your sign-in identity;
 - **delete** your sign-in identity from Firebase Authentication (the Google/Apple link Territor.io used to log

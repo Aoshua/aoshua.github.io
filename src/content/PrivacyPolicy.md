@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: September 4, 2026**
+**Last updated: October 20, 2026**
 
 This Privacy Policy explains what information the Territor.io mobile app ("Territor.io", "the app", "we", "us")
 collects, why we collect it, who we share it with, and the choices and rights you have. Territor.io is
@@ -100,6 +100,20 @@ Health) appear in your run history and can be published like any run you record 
 - Sync is **off by default**. You can turn it off at any time in Settings, or revoke the Apple
   Health permission in your device settings.
 
+### Push notifications
+If you turn notifications on, Territor.io registers a **device push token** with **Firebase Cloud
+Messaging** (part of Google Firebase) so we can send you alerts about your games: your territory and
+score (such as when another player carves into your land or passes your score), your running streak,
+new members in your groups, and your groups' seasons (such as a season starting, ending, or needing
+to be planned). We store that token, the device platform (iOS or Android), and when it was last seen,
+linked to your account. We use it only to deliver these notifications.
+
+Notifications are optional. You choose whether to grant the permission, and you can revoke it in your
+device settings at any time. Territory, score, streak and new-member alerts can each be turned on or off
+in Territor.io's settings. Season notifications have no separate switch: they also appear in your in-app
+inbox, and are pushed only while you allow notifications. When you sign out or delete your account, we
+remove your device tokens.
+
 ### On-device information
 If you finish a run while offline, the full run — including its track points — is stored **locally on
 your device** until it can be submitted, then cleared. This data stays on your device and is not
@@ -111,7 +125,7 @@ details, and — while a run is recording — the **approximate** location of ea
 to about 110 metres so the log cannot be used to retrace your route. The log resets each day, is
 capped in size, and is **never sent to us automatically**.
 
-You can read it at any time in **Settings → Logs**, clear it there, and it leaves your device only
+You can read it at any time in **Settings → View logs**, clear it there, and it leaves your device only
 when you choose to email it to us as a bug report. When you do, your email app opens with the log
 attached and shows you what is being sent — you can remove the attachment or cancel before sending.
 The log is also removed when you uninstall the app or clear its data.
@@ -149,6 +163,8 @@ We use the information above to:
 - sync runs recorded offline;
 - if you turn on Apple Fitness sync, import runs you recorded on your Apple Watch or another
   Health-connected app so they appear in your history;
+- send you notifications about your games (for example, when your territory is taken, your score is
+  passed, or a season you play in ends);
 - keep the game fair (detecting implausible speeds, GPS quality problems, and suspicious loops);
 - respond to your support requests and comply with legal obligations.
 
@@ -162,6 +178,7 @@ Territor.io is a competitive, social game, so some information is shown to other
   **score**.
 - On the territory map: your **username**, **color**, and the **boundary shape of loops you have
   published**.
+- In a group's seasons: the season's name and, if you are its **Captain**, that you hold the role.
 
 Who that audience is depends on where you publish. A **private group** shows your runs only to its
 members. The **Global** game, and any group marked **public**, are visible to every Territor.io player.
@@ -184,6 +201,7 @@ provide its service:
 | Provider | Purpose | What it receives |
 |---|---|---|
 | **Google Firebase Authentication** (Google LLC) | Sign-in and identity | Your Google/Apple account identity and tokens |
+| **Google Firebase Cloud Messaging** (Google LLC) | Push notification delivery | Your device push token and the notification's title and text |
 | **Google Sign-In / Apple Sign-In** | Authentication providers | Your account credentials (handled by them, not us) |
 | **MapTiler / CARTO / OpenStreetMap** | Base map tiles | The map area (coordinates) your device is viewing |
 | **Open-Meteo** | Weather & elevation for scoring | A downsampled sample of your route's coordinates, plus the run's times (sent by our server) |
@@ -214,7 +232,9 @@ associated data at any time — see [Account and Data Deletion](AccountAndDataDe
 ### Deleting your data
 When you delete your account, we remove your loops and their publications, your group memberships, your
 trophies, and your landmark claims — along with the per-run snapshots (conditions, achievements, and
-enclosed landmarks) attached to those runs. We then anonymize your account record, clearing your email,
+enclosed landmarks) attached to those runs. We also remove your rows on past seasons' final standings,
+the record of which season recaps you've seen, your registered device tokens, and any notifications you
+have sent or received, and you are removed as the Captain of any season. We then anonymize your account record, clearing your email,
 username, display name, and photo. Your sign-in identity is deleted from Firebase Authentication as part
 of the process. Some information may be retained where required for legal, security, or fraud-prevention
 reasons.
@@ -233,6 +253,8 @@ information, to object to or restrict certain processing, and to withdraw consen
 
 - **Location:** You control location access in your device settings and can revoke it at any time
   (Territor.io can't record runs without it).
+- **Notifications:** You choose whether to allow notifications, can turn each type on or off in
+  Territor.io's settings, and can revoke the permission in your device settings at any time.
 - **Access and deletion:** You can delete your account in-app or by contacting us. To request a copy of
   your data, email **forsyte.studios@gmail.com**.
 - **EU/UK (GDPR)** and **California (CCPA/CPRA)** residents have additional rights, including the right

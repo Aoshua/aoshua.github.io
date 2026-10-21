@@ -1,6 +1,6 @@
 # Terms of Service & End User License Agreement
 
-**Last updated: August 18, 2026**
+**Last updated: October 20, 2026**
 
 These Terms of Service and End User License Agreement ("Terms") are a legal agreement between you and
 **Joshua Abbott, doing business as Forsyte Studios** ("Forsyte Studios", "Territor.io", "we", "us")
@@ -41,7 +41,7 @@ grant you no rights other than the license above.
 You agree not to:
 
 - break the law or infringe anyone's rights while using Territor.io;
-- harass, threaten, or abuse other players, or post offensive content in usernames or group names;
+- harass, threaten, or abuse other players, or post offensive content in usernames, group names, or season names;
 - attempt to gain unauthorized access to accounts, data, or systems;
 - upload malware or attempt to overwhelm, probe, or circumvent our security or rate limits.
 
@@ -53,8 +53,8 @@ location, time, or run data, and not to use vehicles or other means to fake a ru
 We enforce fair play through automated checks, which may include speed/pace limits, GPS-quality
 thresholds, and sanity checks on implausible areas or movements. **We may reject or remove any run,
 withhold or adjust scores, and suspend or terminate accounts** that we reasonably believe violate these
-Terms or attempt to cheat. Scoring rules are defined by Territor.io and are not configurable by players or
-groups.
+Terms or attempt to cheat. Scoring rules are defined by Territor.io. Group owners and season Captains can
+only switch Territor.io's predefined game rules on or off for their group's seasons.
 
 ## 5. Health, safety, and assumption of risk
 
@@ -184,7 +184,7 @@ Questions about these Terms:
 **forsyte.studios@gmail.com**
 
 These documents are published at **www.forsyte-studios.com**, and are reachable from
-**Settings → Legal** inside the app:
+**About → Legal** inside the app:
 
 - [Terms of Service](TermsOfService.md)
 - [Privacy Policy](PrivacyPolicy.md)
