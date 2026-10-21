@@ -31,6 +31,7 @@ which have their own privacy policies — see [Third parties we share data with]
 ## Information we collect
 
 ### Account and profile information
+
 When you sign in with **Google** or **Apple**, we receive and store a basic profile from that provider
 via Firebase Authentication:
 
@@ -46,6 +47,7 @@ other players.
 > Apple, and Firebase Authentication.
 
 ### Location information
+
 When you start recording a run, Territor.io collects **precise GPS location** from your device so it can trace
 your route and calculate the area your loop encloses.
 
@@ -63,6 +65,7 @@ your route and calculate the area your loop encloses.
 > is in progress or waiting to sync.
 
 ### Run and gameplay information
+
 For each run you record and submit, we store:
 
 - the **enclosed loop boundary** (a simplified polygon) and its **area**,
@@ -85,6 +88,7 @@ For each run you record and submit, we store:
 > loop boundary you submit; we don't track you to those places.
 
 ### Runs imported from Apple Health (iOS only, optional)
+
 On iOS, you can turn on **Apple Fitness sync** in Settings. When you do, and after you grant the
 Apple Health permission prompt, Territor.io reads your **running workouts and their GPS routes** from
 Apple Health so runs you recorded on your Apple Watch (or another app that saves workouts to Apple
@@ -101,6 +105,7 @@ Health) appear in your run history and can be published like any run you record 
   Health permission in your device settings.
 
 ### Push notifications
+
 If you turn notifications on, Territor.io registers a **device push token** with **Firebase Cloud
 Messaging** (part of Google Firebase) so we can send you alerts about your games: your territory and
 score (such as when another player carves into your land or passes your score), your running streak,
@@ -115,6 +120,7 @@ inbox, and are pushed only while you allow notifications. When you sign out or d
 remove your device tokens.
 
 ### On-device information
+
 If you finish a run while offline, the full run — including its track points — is stored **locally on
 your device** until it can be submitted, then cleared. This data stays on your device and is not
 readable by us until you submit the run.
@@ -131,6 +137,7 @@ attached and shows you what is being sent — you can remove the attachment or c
 The log is also removed when you uninstall the app or clear its data.
 
 ### Information we do **not** collect today
+
 Territor.io does **not** include the Firebase Analytics SDK, any crash-reporting SDK, or any advertising
 SDK — the app ships with no analytics, telemetry, or advertising trackers of any kind. We do not request
 access to your contacts, photos, camera, or microphone. The only health/fitness data we ever read is
@@ -138,6 +145,7 @@ your **running workouts and their routes from Apple Health**, and only if you tu
 sync (see [Runs imported from Apple Health](#runs-imported-from-apple-health-ios-only-optional)).
 
 ### Planned features (not yet active)
+
 Territor.io is under active development. Features described in our app materials but **not yet live** may, when
 released, involve additional data — for example:
 
@@ -198,15 +206,15 @@ the global map.
 Territor.io relies on the following service providers ("sub-processors"). Each handles only what it needs to
 provide its service:
 
-| Provider | Purpose | What it receives |
-|---|---|---|
-| **Google Firebase Authentication** (Google LLC) | Sign-in and identity | Your Google/Apple account identity and tokens |
-| **Google Firebase Cloud Messaging** (Google LLC) | Push notification delivery | Your device push token and the notification's title and text |
-| **Google Sign-In / Apple Sign-In** | Authentication providers | Your account credentials (handled by them, not us) |
-| **MapTiler / CARTO / OpenStreetMap** | Base map tiles | The map area (coordinates) your device is viewing |
-| **Open-Meteo** | Weather & elevation for scoring | A downsampled sample of your route's coordinates, plus the run's times (sent by our server) |
-| **Overpass API / OpenStreetMap** | Landmark data for the Landmark rules | Map-area coordinates (sent by our server, not by your device) |
-| **Fly.io** and **Neon** (database) | Hosting and data storage | The account and run data described above |
+| Provider                                         | Purpose                              | What it receives                                                                            |
+| ------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------- |
+| **Google Firebase Authentication** (Google LLC)  | Sign-in and identity                 | Your Google/Apple account identity and tokens                                               |
+| **Google Firebase Cloud Messaging** (Google LLC) | Push notification delivery           | Your device push token and the notification's title and text                                |
+| **Google Sign-In / Apple Sign-In**               | Authentication providers             | Your account credentials (handled by them, not us)                                          |
+| **MapTiler / CARTO / OpenStreetMap**             | Base map tiles                       | The map area (coordinates) your device is viewing                                           |
+| **Open-Meteo**                                   | Weather & elevation for scoring      | A downsampled sample of your route's coordinates, plus the run's times (sent by our server) |
+| **Overpass API / OpenStreetMap**                 | Landmark data for the Landmark rules | Map-area coordinates (sent by our server, not by your device)                               |
+| **Fly.io** and **Neon** (database)               | Hosting and data storage             | The account and run data described above                                                    |
 
 If you choose to email us a bug report or a support request, it travels through **your own email
 provider** and is received at a **Google-hosted (Gmail) address**, so Google handles the message and
@@ -230,6 +238,7 @@ We keep your account and run data for as long as your account is active. You can
 associated data at any time — see [Account and Data Deletion](AccountAndDataDeletion.md).
 
 ### Deleting your data
+
 When you delete your account, we remove your loops and their publications, your group memberships, your
 trophies, and your landmark claims — along with the per-run snapshots (conditions, achievements, and
 enclosed landmarks) attached to those runs. We also remove your rows on past seasons' final standings,
