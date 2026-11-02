@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last updated: September 10, 2026**
+**Last updated: November 2, 2026**
 
 This Privacy Policy explains what information the Territor.io mobile app ("Territor.io", "the app", "we", "us")
 collects, why we collect it, who we share it with, and the choices and rights you have. Territor.io is
@@ -21,8 +21,8 @@ which have their own privacy policies — see [Third parties we share data with]
 - We use your **location** while you record a run so we can measure the loop you run and turn it into
   territory on the map.
 - We use your **Google or Apple account** to sign you in. We never see or store your password.
-- On iOS, you can **optionally** turn on **Apple Fitness sync** to import runs you recorded on
-  your Apple Watch. When you do, we read those workouts and their GPS routes from Apple Health.
+- On iOS, you can **optionally** turn on **Apple Fitness sync** to import runs, walks and hikes
+  you recorded on your Apple Watch. When you do, we read those workouts and their GPS routes from Apple Health.
 - Other players can see your **username, profile color, captured area, and the shape of the loops you
   publish** — not your real name, email, or photo.
 - We **do not sell your data**, and we don't run analytics or advertising trackers in the app today.
@@ -86,12 +86,12 @@ For each run you record and submit, we store:
 
 ### Runs imported from Apple Health (iOS only, optional)
 On iOS, you can turn on **Apple Fitness sync** in Settings. When you do, and after you grant the
-Apple Health permission prompt, Territor.io reads your **running workouts and their GPS routes** from
-Apple Health so runs you recorded on your Apple Watch (or another app that saves workouts to Apple
-Health) appear in your run history and can be published like any run you record in the app.
+Apple Health permission prompt, Territor.io reads your **running, walking and hiking workouts and their GPS routes** from
+Apple Health so activities you recorded on your Apple Watch (or another app that saves workouts to
+Apple Health) appear in your run history and can be published like any run you record in the app.
 
-- We read Apple Health **only** while Apple Fitness sync is turned on, and we read **only running
-  workouts** — no other health or fitness categories.
+- We read Apple Health **only** while Apple Fitness sync is turned on, and we read **only running,
+  walking and hiking workouts** — no other health or fitness categories.
 - We read your data **from Apple Health on your device**; Apple Health is Apple's on-device store,
   and turning the sync off stops any further reads. We never write anything to Apple Health.
 - An imported run is treated exactly like a run you record in the app: the route's GPS points are
@@ -102,14 +102,17 @@ Health) appear in your run history and can be published like any run you record 
 
 ### Push notifications
 If you turn notifications on, Territor.io registers a **device push token** with **Firebase Cloud
-Messaging** (part of Google Firebase) so we can send you alerts about your territory, such as when
-another player carves into your land or passes your score. We store that token, the device platform
-(iOS or Android), and when it was last seen, linked to your account. We use it only to deliver these
-notifications.
+Messaging** (part of Google Firebase) so we can send you alerts about your games: your territory and
+score (such as when another player carves into your land or passes your score), your running streak,
+new members in your groups, and your groups' seasons (such as a season starting, ending, or needing
+to be planned). We store that token, the device platform (iOS or Android), and when it was last seen,
+linked to your account. We use it only to deliver these notifications.
 
-Notifications are optional. You choose whether to grant the permission, you can turn each type on or off
-in Territor.io's settings, and you can revoke the permission in your device settings at any time. When you
-sign out or delete your account, we remove your device tokens.
+Notifications are optional. You choose whether to grant the permission, and you can revoke it in your
+device settings at any time. Territory, score, streak and new-member alerts can each be turned on or off
+in Territor.io's settings. Season notifications have no separate switch: they also appear in your in-app
+inbox, and are pushed only while you allow notifications. When you sign out or delete your account, we
+remove your device tokens.
 
 ### On-device information
 If you finish a run while offline, the full run — including its track points — is stored **locally on
@@ -122,7 +125,7 @@ details, and — while a run is recording — the **approximate** location of ea
 to about 110 metres so the log cannot be used to retrace your route. The log resets each day, is
 capped in size, and is **never sent to us automatically**.
 
-You can read it at any time in **Settings → Logs**, clear it there, and it leaves your device only
+You can read it at any time in **Settings → View logs**, clear it there, and it leaves your device only
 when you choose to email it to us as a bug report. When you do, your email app opens with the log
 attached and shows you what is being sent — you can remove the attachment or cancel before sending.
 The log is also removed when you uninstall the app or clear its data.
@@ -131,7 +134,7 @@ The log is also removed when you uninstall the app or clear its data.
 Territor.io does **not** include the Firebase Analytics SDK, any crash-reporting SDK, or any advertising
 SDK — the app ships with no analytics, telemetry, or advertising trackers of any kind. We do not request
 access to your contacts, photos, camera, or microphone. The only health/fitness data we ever read is
-your **running workouts and their routes from Apple Health**, and only if you turn on Apple Fitness
+your **running, walking and hiking workouts and their routes from Apple Health**, and only if you turn on Apple Fitness
 sync (see [Runs imported from Apple Health](#runs-imported-from-apple-health-ios-only-optional)).
 
 ### Planned features (not yet active)
@@ -158,10 +161,10 @@ We use the information above to:
 - look up weather, daylight, and elevation to compute the **live conditions multiplier** applied to
   your score;
 - sync runs recorded offline;
-- if you turn on Apple Fitness sync, import runs you recorded on your Apple Watch or another
-  Health-connected app so they appear in your history;
-- send you the push notifications you have turned on (for example, when your territory is taken or your
-  score is passed);
+- if you turn on Apple Fitness sync, import runs, walks and hikes you recorded on your Apple Watch
+  or another Health-connected app so they appear in your history;
+- send you notifications about your games (for example, when your territory is taken, your score is
+  passed, or a season you play in ends);
 - keep the game fair (detecting implausible speeds, GPS quality problems, and suspicious loops);
 - respond to your support requests and comply with legal obligations.
 
@@ -175,6 +178,7 @@ Territor.io is a competitive, social game, so some information is shown to other
   **score**.
 - On the territory map: your **username**, **color**, and the **boundary shape of loops you have
   published**.
+- In a group's seasons: the season's name and, if you are its **Captain**, that you hold the role.
 
 Who that audience is depends on where you publish. A **private group** shows your runs only to its
 members. The **Global** game, and any group marked **public**, are visible to every Territor.io player.
@@ -228,8 +232,9 @@ associated data at any time — see [Account and Data Deletion](AccountAndDataDe
 ### Deleting your data
 When you delete your account, we remove your loops and their publications, your group memberships, your
 trophies, and your landmark claims — along with the per-run snapshots (conditions, achievements, and
-enclosed landmarks) attached to those runs. We also remove your registered device tokens and any
-notifications you have sent or received. We then anonymize your account record, clearing your email,
+enclosed landmarks) attached to those runs. We also remove your rows on past seasons' final standings,
+the record of which season recaps you've seen, your registered device tokens, and any notifications you
+have sent or received, and you are removed as the Captain of any season. We then anonymize your account record, clearing your email,
 username, display name, and photo. Your sign-in identity is deleted from Firebase Authentication as part
 of the process. Some information may be retained where required for legal, security, or fraud-prevention
 reasons.
